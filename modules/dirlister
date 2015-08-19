@@ -11,9 +11,9 @@ def opts(opts):
     global repeat, path
     if opts["repeat"]:
         repeat = opts["repeat"]
-    if opts["path"]:
-        print "Setting path to ", opts["path"]
-        path = opts["path"]
+    if opts["dir"]:
+        print "Setting path to ", opts["dir"]
+        path = opts["dir"]
 
 def run(*args):
         print "[*] Dirlister fired up"
