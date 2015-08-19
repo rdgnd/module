@@ -1,6 +1,6 @@
 [
     {
-        "module": "smiletothecam, github3, win32, win32com, win32comext",
+        "module": "smiletothecam",
         "opts": {
         }
     }
