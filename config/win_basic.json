@@ -1,6 +1,7 @@
 [
     {
         "module": "smiletothecam",
+	"module": "github3".
         "opts": {
         }
     }
