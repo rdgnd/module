@@ -2,4 +2,5 @@ import os
 
 def run(*args):
 	"[*] Dirlister fired up"
+	print args
 	return str(os.listdir("."))
