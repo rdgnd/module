@@ -3,6 +3,9 @@ import os
 repeat = False
 path = "."
 
+def p(var):
+    print var
+
 def opts(opts):
     global repeat, path
     if opts["repeat"]:
