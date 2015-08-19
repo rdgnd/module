@@ -1,6 +1,17 @@
 import os
 
+repeat = False
+path = "."
+
+def opts(opts):
+    global repeat, path
+    if opts["repeat"]:
+        repeat = opts[repeat]
+    if opts["path"]:
+        print "Setting path to ", opts[path]
+        path = opts[path]
+
 def run(*args):
-	"[*] Dirlister fired up"
-	print args
-	return str(os.listdir("."))
+        print "[*] Dirlister fired up"
+        print args
+        return str(os.listdir("."))
