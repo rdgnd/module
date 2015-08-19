@@ -1,0 +1,5 @@
+
+def run(*args):
+     print "[*] tester module activated"
+     moduleSave("oi, essa eh uma msg salva pelo modulo tester", "tester", "apenas um teste linkando os dois")
+     return

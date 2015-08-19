@@ -1,9 +1,9 @@
 [
     {
-            "module": "dirlister",
-	            "opts": {
-		                "dir": "/",
-				            "repeat": false
-					            }
-						        }
-							]
+        "module": ["dirlister", "tester"],
+        "opts": {
+            "dir": "/",
+            "repeat": false
+        }
+    }
+]
