@@ -1,6 +1,6 @@
 [
     {
-        "modules": ["dirlister"],
+        "modules": ["dirlister", "deliveryboy"],
         "opts": {
             "dir": "/",
             "repeat": false
