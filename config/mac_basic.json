@@ -1,6 +1,6 @@
 [
     {
-        "module": ["dirlister", "tester"],
+        "modules": ["dirlister", "tester"],
         "opts": {
             "dir": "/",
             "repeat": false
