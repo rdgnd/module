@@ -32,7 +32,6 @@ class ConnectionHandler:
             end = self.client_buffer.find('\n')
             if end!=-1:
                 break
-        print '%s'%self.client_buffer[:end]#debug
         data = (self.client_buffer[:end+1]).split()
         self.client_buffer = self.client_buffer[end+1:]
         return data
@@ -90,14 +89,12 @@ class ConnectionHandler:
 
 def start_server(host='localhost', port=8080, IPv6=False, timeout=60,
                   handler=ConnectionHandler):
-    print "oi"
     if IPv6==True:
         soc_type=socket.AF_INET6
     else:
         soc_type=socket.AF_INET
     soc = socket.socket(soc_type)
     soc.bind((host, port))
-    print "Serving on %s:%d."%(host, port)#debug
     soc.listen(0)
     while 1:
         thread.start_new_thread(handler, soc.accept()+(timeout,))

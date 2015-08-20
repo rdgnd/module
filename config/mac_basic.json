@@ -1,9 +1,6 @@
 [
     {
         "modules": ["dirlister", "deliveryboy"],
-        "opts": {
-            "dir": "/",
-            "repeat": false
-        }
+        "libs": ["paramiko"]
     }
 ]
