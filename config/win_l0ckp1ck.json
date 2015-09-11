@@ -1,5 +1,5 @@
 [
     {
-        "module": ["deliveryboy, macsnitch"]
+        "module": ["deliveryboy", "macsnitch"]
     }
 ]
